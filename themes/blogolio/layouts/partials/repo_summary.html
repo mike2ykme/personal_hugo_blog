@@ -5,9 +5,7 @@
         <div class="w3-container w3-center">
           <p style="display: inline-block;
           word-break: break-word;">
-            {{ .description }}
-            <!-- <hr style="border-style: inset;"/>
-            git://github.com/{{- .full_name -}}.git -->
+            {{ .description | truncate 200 }}
             </p>
         </div>
     </div>

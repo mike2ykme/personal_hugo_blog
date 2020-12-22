@@ -3,6 +3,8 @@ title: "Fourth Post"
 sub_title: "Fourth Post"
 date: 2020-12-21T21:16:16-06:00
 author: "Micheal Arsenault"
+author_image: "/images/me_cropped.jpg"
+author_alt_text: "Mike!"
 image: "/images/woods.jpg"
 alt_text: "Fourthpost screenshot"
 year: "2020"

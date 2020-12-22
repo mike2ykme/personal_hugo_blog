@@ -1,6 +1,6 @@
 baseURL = "http://mike2ykme.github.io/"
 languageCode = "en-us"
-title = "Micheal's Blogolio!"
+title = "Mike's Blog"
 theme = "blogolio"
 pygmentsUseClasses = true
     [params]
@@ -11,3 +11,14 @@ pygmentsUseClasses = true
     gh_user = "mike2ykme"
     tagsLimit = 50
     
+    [permalinks]
+    posts="posts/:year/:month/:slug"
+    year = "/posts/:slug"
+    month = "/posts/:slug"
+
+    [taxonomies]
+    year = "year"
+    month = "month"
+    tag = "tags"
+    series = "series"
+    category = "categories"

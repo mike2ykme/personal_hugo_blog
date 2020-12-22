@@ -1,18 +1,23 @@
 <!-- Blog entry -->
-<div class="w3-card-4 w3-margin w3-white ">
-  <img
-    src="{{ .Params.image | relURL }}"
-    alt="{{ .Params.alt_text}}"
-    style="width: 100%"
-  />
+<div class="w3-card-4 w3-margin w3-white">
+  <div style="overflow: hidden; max-height: 250px;">
+    <img
+      src="{{ .Params.image | relURL }}"
+      alt="{{ .Params.alt_text}}"
+      style="width: 100%;"
+    />
+  </div>
   <div class="w3-container">
-    <h3><b>{{ .Title }}</b></h3>
+    <a href="{{ .RelPermalink }}" style="text-decoration: none">
+      <h3>
+        <b>{{ .Title }}</b>
+      </h3>
+    </a>
     <h5>
       Posted:
       <span class="w3-opacity">{{ .Date.Format "January 2, 2006"}}</span>
     </h5>
   </div>
-
   <div class="w3-container">
     <p>{{ .Summary }}</p>
     <div class="w3-row">

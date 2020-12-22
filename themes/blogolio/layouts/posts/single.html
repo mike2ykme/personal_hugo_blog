@@ -2,18 +2,18 @@
 <article class="post">
   <header>
     <h2>{{ .Title }}</h2>
-    <p>By {{ .Params.Author }}</p>
-    <p>Posted {{.Date.Format "January 2, 2006" }}</p>
+    <p> By: {{.Params.Author }} <img class="w3-circle" src="{{ .Params.Author_image }}" alt="" width="48" height="48"></p>
+    <p>Posted: <b>{{.Date.Format "January 2, 2006" }}</b></p>
     <p>
         {{ $reading_time := math.Round (div (countwords .Content) 175.0) }}
         
-        Reading Time: 
+        Reading Time: <b>
         {{  if lt $reading_time 5 -}}
           <span style="font-size:smaller;"><</span>5
         {{ else }}
           {{ $reading_time }} 
         {{ end -}}
-        minutes
+        </b> minutes
   
   
       </p>
