@@ -1,0 +1,9 @@
+<!-- About Card -->
+<div class="w3-card w3-margin w3-margin-top ">
+    <img src="{{ .Params.image | relURL }}" alt="{{ .Params.alt_text}}" style="width:100%">
+  <div class="w3-container w3-white">
+    <h4><b>{{ .Site.Params.author }}</b></h4>
+    {{ .Content}}
+  </div>
+</div>
+<hr />

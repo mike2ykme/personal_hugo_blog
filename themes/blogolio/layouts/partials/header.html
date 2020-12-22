@@ -1,0 +1,13 @@
+<!-- Header -->
+{{- if $.Page.IsHome -}}
+<header class="w3-container w3-center w3-padding-8">
+  <h1><b>{{ .Site.Title }}</b></h1>
+  <!-- <p>
+    Welcome to the ramblings of <span class="w3-tag">{{- .Site.Params.Author -}}</span>
+  </p> -->
+</header>
+{{ else }}
+<header class="w3-container w3-center w3-padding-8">
+  <h1><b>{{ .Site.Title }}</b></h1>
+  </header>
+{{- end -}}

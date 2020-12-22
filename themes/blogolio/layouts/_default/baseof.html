@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  {{- partial "head.html" . -}}
+  <!--  -->
+  {{- partial "styles.html" . -}}
+  <body class="w3-light-grey">
+    <!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+    <!-- https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_blog&stacked=h -->
+    <div class="w3-content" style="max-width: 1400px">
+      {{- partial "header.html" . -}}
+      
+      {{- partial "nav.html" . -}}
+      <!-- Grid -->
+      <div class="w3-row">
+        <div id="content">{{- block "main" . }}{{- end }}</div>
+      </div>
+    </div>
+    {{- partial "footer.html" . -}}
+  </body>
+</html>

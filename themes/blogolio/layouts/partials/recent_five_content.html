@@ -1,0 +1,25 @@
+<!-- Posts -->
+<div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Recent Posts</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      {{ range first 4 .Site.RegularPages.ByDate.Reverse }}
+      <li class="w3-padding-16">
+        {{- if .Params.image}}
+        <img src="{{ .Params.image | relURL }}" alt="{{ .Params.alt_text}}" class="w3-left w3-margin-right" style="width:50px">
+        {{ else }}
+        <img src="/images/logo1.jpg" alt="placeholder image" class="w3-left w3-margin-right" style="width:50px">
+
+        {{ end }}
+        <span class="w3-large">{{ .Title }}</span><br>
+        <span>{{ .Summary | truncate 45}}</span>
+      </li>
+      <!--  -->
+      <!-- <li>
+        <a href="{{.RelPermalink}}">{{ .Title }}</a>
+      </li> -->
+      {{ end }}
+    </ul>
+  </div>
+

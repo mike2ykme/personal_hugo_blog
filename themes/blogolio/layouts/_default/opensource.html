@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+    <h2>{{ .Title }}</h2>
+
+    {{ .Content }}
+    {{ $url := printf "%s/%s/repos" .Site.Params.gh_url .Site.Params.gh_user }}
+    {{$repos := getJSON $url }}
+    <nav class="container">
+        {{ range $repos }}
+            {{ partial "repo_summary.html" . }}
+        {{ end }}
+    </nav>
+
+{{ end }}

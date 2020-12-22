@@ -1,0 +1,13 @@
+baseURL = "http://mike2ykme.github.io/"
+languageCode = "en-us"
+title = "Micheal's Blogolio!"
+theme = "blogolio"
+pygmentsUseClasses = true
+    [params]
+    dev = false
+    author = "Micheal Arsenault"
+
+    gh_url = "https://api.github.com/users"
+    gh_user = "mike2ykme"
+    tagsLimit = 50
+    

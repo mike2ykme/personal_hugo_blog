@@ -1,0 +1,25 @@
+<div class="w3-card w3-margin">
+  <div class="w3-container w3-padding">
+    <h4>Tags</h4>
+  </div>
+  <div class="w3-container w3-white">
+        <p>
+            {{- $.Scratch.Set "myLimit" 0 }} 
+            {{- range $name, $items := .Site.Taxonomies.tags }} 
+                {{- $.Scratch.Set "myLimit" (add ($.Scratch.Get "myLimit") 1) }} 
+                {{- if le ($.Scratch.Get "myLimit") ($.Site.Params.tagsLimit)}}
+                {{- if le ($.Scratch.Get "myLimit") 1}}
+                <span class="w3-tag w3-black w3-margin-bottom" style="margin: 3px;">
+                    <a href="{{ $.Site.BaseURL }}/tags/{{ $name | urlize | lower }}" class="tag-text" >{{ $name }}</a>
+                </span>
+                {{ else }}
+                <span class="w3-tag w3-light-grey w3-small" style="margin: 3px;">
+                    <a href="{{ $.Site.BaseURL }}/tags/{{ $name | urlize | lower }}" class="tag-text" >{{ $name }}</a>
+                </span>
+                {{- end }}
+
+                {{- end }}
+            {{- end }}
+        </p>
+    </div>
+</div>
