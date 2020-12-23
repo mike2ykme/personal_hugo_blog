@@ -1,5 +1,7 @@
 {{ define "main"}}
-<h2>Blog Posts: {{ .Title }}</h2>
+{{ $full_title := printf "%s%s" "Blog Posts: " .Title }}
+{{ partial "title_bar" $full_title }}
+<!-- <h2>Blog Posts: {{ .Title }}</h2> -->
 <div class="w3-row">
 {{ range (.Paginator 8).Pages }}
     {{ partial "post_summary.html" . }}

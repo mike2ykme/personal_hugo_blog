@@ -1,12 +1,13 @@
-<div class="w3-col l3 m6 s12 w3-center" style="padding: 3px">
-  <div class="w3-card-4">
-    <div style="overflow: hidden; max-height: 100px;">
+<div class="w3-col l3 m6 s12" style="padding: 3px">
+<!-- <div class="w3-col w3-quarter" style="padding: 3px"> -->
+  <div class="w3-card-4 post_summary" style=" overflow: hidden; height: 400px;">
+    <div class="post_summary_image" style="overflow: hidden;max-height: 230px;">
       <img
         src="{{ .Params.image | relURL }}"
         alt="{{ .Params.alt_text}}"
         style="width: 100%;"
       />
-    </div>
+    </div style="display:inline-block">
       <!-- <img src="{{ .Params.image | relURL }}" alt="Alps" style="width: 100%" /> -->
       <div class="w3-container w3-center">
         <a href="{{ .RelPermalink }}"><h4>{{ .Title }}</h4></a>

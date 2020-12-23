@@ -1,7 +1,8 @@
 {{ define "main"}}
 <article class="post">
   <header>
-    <h2>{{ .Title }}</h2>
+    <!-- <h2>{{ .Title }}</h2> -->
+    {{ partial "title_bar.html" .Title }}
     <p> By: {{.Params.Author }} <img class="w3-circle" src="{{ .Params.Author_image }}" alt="" width="48" height="48"></p>
     <p>Posted: <b>{{.Date.Format "January 2, 2006" }}</b></p>
     <p>

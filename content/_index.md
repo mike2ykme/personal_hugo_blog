@@ -7,9 +7,8 @@ alt_text: "it's a me!"
 ---
 
 Hi, I'm Mike!
-This is my Blogolio!
 
-You'll find things like my:
-- interests
-- work
-- learning(s)
+Here you're going to find many of my interests including technology, programming, software in general, and gaming.
+
+You can follow me at Twitter: [@MikeArsenault18](https://twitter.com/MikeArsenault18)
+

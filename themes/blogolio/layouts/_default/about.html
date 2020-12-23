@@ -1,0 +1,27 @@
+{{ define "main" }}
+<!--  -->
+{{ partial "title_bar.html" .Title }}
+<!--  -->
+<div class="w3-row">
+  <div class="w3-col l4 m6 s12 ">
+    <div class="w3-card-4 w3-round" style="width: 100%; max-width: 300px">
+      <img
+        class="w3-round"
+        src="{{ .Params.Image | relURL }}"
+        alt="{{ .Params.alt_text }}"
+        style="width: 100%; opacity: 0.85"
+      />
+      <div class="w3-container">
+        <h4 class="w3-center"><b>Micheal Arsenault</b></h4>
+        <p>Development and Support Specialist</p>
+      </div>
+    </div>
+    <br />
+  </div>
+  <div class="w3-col l8 m6 s12">
+      <div class="w3-container">
+          {{ .Content }}
+      </div>
+    </div>
+</div>
+{{ end }}

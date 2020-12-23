@@ -1,28 +1,30 @@
 {{ define "main" }}
-<!--  -->
-{{ if .Site.Params.Dev}}
-<h1>{{ .Site.Title }}</h1>
-<h2>DIR:{{ .File.Dir }}{{ .File.Path }}</h2>
-{{ end }}
-<!--  -->
-<!-- {{ .Content }} -->
+  <div class="w3-row">
+    <!--  -->
+    {{ if .Site.Params.Dev}}
+    <h1>{{ .Site.Title }}</h1>
+    <h2>DIR:{{ .File.Dir }}{{ .File.Path }}</h2>
+    {{ end }}
+    <!--  -->
+    <!-- {{ .Content }} -->
 
-<div class="w3-col l8 s12"> <!-- BLOG POSTS-->
-  <!--  -->
-  {{ range first 2 ( where .Site.RegularPages "Type" "in"  "posts").ByDate.Reverse}}
-  <!--  -->
-  {{ partial "post_card.html" . }} 
-  <!--  -->
-  {{ end }}
-  
-</div> <!-- END BLOG POSTS -->
+    <div class="w3-col l8 s12"> <!-- BLOG POSTS-->
+      <!--  -->
+      {{ range first 2 ( where .Site.RegularPages "Type" "in"  "posts").ByDate.Reverse}}
+      <!--  -->
+      {{ partial "post_card.html" . }} 
+      <!--  -->
+      {{ end }}
+      
+    </div> <!-- END BLOG POSTS -->
 
-<div class="w3-col l4"> <!-- Introduction menu -->
-{{ partial "about_card.html" . }}
+    <div class="w3-col l4"> <!-- Introduction menu -->
+    {{ partial "about_card.html" . }}
 
-{{ partial "recent_five_content.html" . }}
+    {{ partial "recent_five_content.html" . }}
 
-{{ partial "tag_box.html" . }}
-</div>
-<!--  -->
+    {{ partial "tag_box.html" . }}
+    </div>
+    <!--  -->
+  </div>
 {{ end }}

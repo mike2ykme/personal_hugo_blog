@@ -1,0 +1,17 @@
+<!-- https://mangolassi.it/topic/21564/how-can-i-scale-an-image-in-a-hugo-page -->
+{{ $imagename := (.Get 0) }}
+{{ $width := .Get 1 }}
+{{ $height := .Get 2 }}
+{{ $classnames := .Get 3 }}
+<img src="{{ $imagename | relURL }}" 
+    {{- if $width }}
+    width="{{ $width }}" 
+    {{- end -}}
+    {{- if $height }}
+    height="{{ $height }}"
+    {{- end -}}
+    {{- if $classnames }}
+    class="{{$classnames}}"
+    {{- end -}}>
+
+<!-- author_image: "{{ "/images/me_cropped.jpg" | relURL }}" -->

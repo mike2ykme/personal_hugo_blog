@@ -1,11 +1,7 @@
 {{ define "main" }}
 <!--  -->
-{{ if .Site.Params.Dev}}
-<div class="w3-panel w3-red">
-  <h2>DIR:{{ .File.Dir }}{{ .File.Path }}</h2>
-</div> 
-{{ end }} 
-<h2>{{ .Title }}</h2>
+{{ partial "title_bar.html" .Title }}
+<!-- <h2>{{ .Title }}</h2> -->
   <!--  -->
   {{ .Content }}
   <!--  -->

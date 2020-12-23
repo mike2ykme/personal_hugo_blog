@@ -1,8 +1,15 @@
 {{ define "main"}}
-<h2>Blog Posts:</h2>
+<!-- <h2>Blog Posts:</h2> -->
+{{ partial "title_bar.html" "Blog Posts:" }}
 <div class="w3-row">
-{{ range (.Paginator 8).Pages }}
+{{ range $idx, $page := (.Paginator 8).Pages }}
     {{ partial "post_summary.html" . }}
+    <!-- {{ $page.Params.Title}}     -->
+    <!-- {{ if eq (mod $idx 4) 0}}
+        {{if gt $idx 0 }}
+            </div><div class="w3-row">
+        {{ end }}
+    {{ end}}  -->
 
 {{ end }}
 </div>

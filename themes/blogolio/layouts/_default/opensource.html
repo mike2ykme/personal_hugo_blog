@@ -1,6 +1,7 @@
 {{ define "main" }}
 
-    <h2>{{ .Title }}</h2>
+    {{ partial "title_bar" .Title }}
+    <!-- <h2>{{ .Title }}</h2> -->
 
     {{ .Content }}
     {{ $url := printf "%s/%s/repos" .Site.Params.gh_url .Site.Params.gh_user }}
