@@ -4,7 +4,7 @@
       <h4>Recent Posts</h4>
     </div>
     <ul class="w3-ul w3-hoverable w3-white">
-      {{ range first 4 .Site.RegularPages.ByDate.Reverse }}
+      {{ range first 4 (where .Site.RegularPages "Type" "in" "posts").ByDate.Reverse }}
       <li class="w3-padding-16">
         {{- if .Params.image}}
         <img src="{{ .Params.image | relURL }}" alt="{{ .Params.alt_text}}" class="w3-left w3-margin-right" style="width:50px">
@@ -22,4 +22,5 @@
       {{ end }}
     </ul>
   </div>
+  <hr>
 
