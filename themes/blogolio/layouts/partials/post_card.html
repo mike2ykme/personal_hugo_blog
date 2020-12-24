@@ -14,8 +14,11 @@
       </h3>
     </a>
     <h5>
+      {{- $created := .Date.Format "January 2, 2006" -}}
+    {{- $modified := .Lastmod.Format "January 2, 2006" -}}
       Posted:
-      <span class="w3-opacity">{{ .Date.Format "January 2, 2006"}}</span>
+      <span class="w3-opacity">{{ .Date.Format "January 2, 2006"}}
+      {{- if ne $created $modified }}</span> Modified: <span class="w3-opacity">{{.Lastmod.Format "January 2, 2006" }} {{- end }}</span>
     </h5>
   </div>
   <div class="w3-container">

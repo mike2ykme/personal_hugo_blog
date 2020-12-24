@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "Mike's Blog"
 theme = "blogolio"
 pygmentsUseClasses = true
+enableGitInfo  = true 
+
     [params]
     dev = false
     author = "Micheal Arsenault"

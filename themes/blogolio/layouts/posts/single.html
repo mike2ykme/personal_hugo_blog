@@ -1,12 +1,11 @@
 {{ define "main"}}
 <article class="post">
-  <header>
-    <!-- <h2>{{ .Title }}</h2> -->
-    {{ partial "title_bar.html" .Title }}
-    <p> By: {{.Params.Author }} <img class="w3-circle" src="{{ .Params.Author_image }}" alt="" width="48" height="48"></p>
-    {{ $created := .Date.Format "January 2, 2006"}}
-    {{ $modified := .Lastmod.Format "January 2, 2006"}}
-
+  <header >
+    {{ $full_title := printf "%s | %s" .Title .Params.sub_title}}
+    {{ partial "title_bar.html" $full_title }}
+    <p> By: <b>{{.Params.Author }}</b> <img class="w3-circle" src="{{ .Params.Author_image }}" alt="" width="48" height="48"></p>
+    {{- $created := .Date.Format "January 2, 2006" -}}
+    {{- $modified := .Lastmod.Format "January 2, 2006" -}}
     <p>Posted: <b>{{.Date.Format "January 2, 2006" }}</b>
       {{- if ne $created $modified }}| Modified: <b>{{.Lastmod.Format "January 2, 2006" }} {{- end }}</b></p>
     <p>
@@ -18,13 +17,13 @@
         {{ else }}
           {{ $reading_time }} 
         {{ end -}}
-        </b> minutes
+        minutes</b>
   
   
       </p>
   </header>
   <!--  -->
-  <section class="body">
+  <section class="body w3-container">
     <!--  -->
     {{ .Content }}
     <!--  -->
