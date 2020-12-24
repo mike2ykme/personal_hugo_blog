@@ -6,7 +6,7 @@ author: "{{ .Site.Params.Author }}"
 author_image: "{{ "/images/me_cropped.jpg" | relURL }}"
 author_alt_text: "Mike!"
 image: "{{ "/images/woods.jpg" | relURL }}"
-alt_text: "{{ replace .Name "-" "" | title }} screenshot"
+alt_text: "{{ replace .Name "-" " " | title }} screenshot"
 year: "{{ dateFormat "2006" .Date }}"
 month: "{{ dateFormat "2006/01" .Date }}"
 draft: false

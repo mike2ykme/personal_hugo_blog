@@ -1,7 +1,7 @@
 ---
 title: "Résumé"
 date: 2020-12-21T15:23:36-06:00
-draft: false
+draft: true
 ---
 
 My resume Page

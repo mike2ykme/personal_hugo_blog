@@ -22,18 +22,18 @@
     <p>{{ .Summary }}</p>
     <div class="w3-row">
       <div class="w3-col m8 s12">
+        <a href="{{ .RelPermalink }}">
         <p>
           <button class="w3-button w3-padding-large w3-white w3-border">
-            <a href="{{ .RelPermalink }}">
               <b> READ MORE » </b>
-            </a>
-          </button>
-        </p>
+            </button>
+          </p>
+        </a>
       </div>
       <div class="w3-col m4 w3-hide-small">
         <p>
           <span class="w3-padding-large w3-right">
-            <b>tags</b>
+            <b>tags:</b> <br>
             {{ range .Params.tags}}
             <span class="w3-tag w3-green w3-round-large">
               <a href="/tags/{{ . | urlize }}" class="tag"> {{ . }}</a>
