@@ -12,7 +12,7 @@
       <!--  -->
       {{ range first 2 ( where .Site.RegularPages "Type" "in"  "posts").ByDate.Reverse}}
       <!--  -->
-      {{ partial "post_card.html" . }} 
+        {{ partial "post_card.html" . }} 
       <!--  -->
       {{ end }}
       
