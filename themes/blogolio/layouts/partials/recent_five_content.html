@@ -1,5 +1,6 @@
 <!-- Posts -->
-<div class="w3-card w3-margin">
+<a href="{{ .RelPermalink }}" style="text-decoration: none;">
+  <div class="w3-card w3-margin">
     <div class="w3-container w3-padding">
       <h4>Recent Posts</h4>
     </div>
@@ -15,12 +16,9 @@
         <span class="w3-large">{{ .Title }}</span><br>
         <span>{{ .Summary | truncate 45}}</span>
       </li>
-      <!--  -->
-      <!-- <li>
-        <a href="{{.RelPermalink}}">{{ .Title }}</a>
-      </li> -->
       {{ end }}
     </ul>
   </div>
-  <hr>
+</a>
+<hr>
 

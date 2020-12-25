@@ -10,7 +10,7 @@
 
     <div class="w3-col l8 s12"> <!-- BLOG POSTS-->
       <!--  -->
-      {{ range first 2 ( where .Site.RegularPages "Type" "in"  "posts").ByDate.Reverse}}
+      {{ range first 4 ( where .Site.RegularPages "Type" "in"  "posts").ByDate.Reverse}}
       <!--  -->
         {{ partial "post_card.html" . }} 
       <!--  -->

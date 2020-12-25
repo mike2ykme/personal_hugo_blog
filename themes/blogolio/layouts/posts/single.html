@@ -1,8 +1,13 @@
 {{ define "main"}}
 <article class="post">
   <header >
-    {{ $full_title := printf "%s | %s" .Title .Params.sub_title}}
-    {{ partial "title_bar.html" $full_title }}
+    {{ if .Params.sub_title}}
+      {{ $full_title := printf "%s | %s" .Title .Params.sub_title }}
+      {{ partial "title_bar.html" $full_title }}
+    {{ else }}
+      {{ $full_title := printf "%s" .Title}}
+      {{ partial "title_bar.html" $full_title }}
+    {{ end }}
     <p> By: <b>{{.Params.Author }}</b> <img class="w3-circle" src="{{ .Params.Author_image }}" alt="" width="48" height="48"></p>
     {{- $created := .Date.Format "January 2, 2006" -}}
     {{- $modified := .Lastmod.Format "January 2, 2006" -}}

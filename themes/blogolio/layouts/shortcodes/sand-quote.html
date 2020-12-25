@@ -1,0 +1,11 @@
+<!-- Sand quote -->
+{{ $quote := (.Get 0)}} {{ $url := .Get 1}} {{ $url_title := .Get 2}}
+<div class="w3-panel w3-leftbar w3-sand">
+  <span style="font-size: 150px; line-height: 0.6em; opacity: 0.2">❝</span>
+  <p class="w3-large w3-serif" style="margin-top: -40px">
+    {{ $quote }}
+  </p>
+  <a href="{{ $url }}" style="text-decoration: none">
+    <p>{{ $url_title }} <img src="{{ "/icons/link.svg" | relURL }}" alt="link icon"></p>
+  </a>
+</div>
