@@ -6,10 +6,21 @@
     {{ .Content }}
     {{ $url := printf "%s/%s/repos" .Site.Params.gh_url .Site.Params.gh_user }}
     {{$repos := getJSON $url }}
-    <nav class="container">
+    <div class="opensource-grid-container">
+        {{ range $repos }}
+        <div class="opensource-grid-item">
+            <h3><a href="{{.html_url }}">{{ .name }}</a></h3>
+                <h6 style="display: inline-block;
+                word-break: break-word;">
+                {{ .description | truncate 200 }}
+            </h6>
+        </div>
+        {{ end }}
+    </div>
+    <!-- <nav class="container">
         {{ range $repos }}
             {{ partial "repo_summary.html" . }}
         {{ end }}
-    </nav>
+    </nav> -->
 
 {{ end }}
