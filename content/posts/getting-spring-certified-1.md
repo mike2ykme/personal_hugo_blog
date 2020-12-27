@@ -13,7 +13,7 @@ draft: false
 categories:
   - career
 tags:
-  - certifications
+  - certification
   - Java
   - Spring
 series:
@@ -23,9 +23,9 @@ Summary: "let's start with the basics of the Spring Container"
 
 resources:
 
-* [Spring Professional Study guide - Core](https://pivotalcontent.s3.amazonaws.com/academy/Spring-Professional-Certification-Study-Guide.pdf)
+* [Spring Professional Study guide](https://pivotalcontent.s3.amazonaws.com/academy/Spring-Professional-Certification-Study-Guide.pdf)
 
-* [Spring Professional Study guide - Web Servlet](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#spring-web)
+* [Spring Professional Documentation - Web Servlet](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#spring-web)
     * Much of the content from Servlet and the react WebFlux cross over, and both of these documents contain references to each other; however, because of some fundamental differences of the underlying architecture there are also considerable differences.
 
 --- 

@@ -1,0 +1,7 @@
+{{ $count := .Get 0 }}
+    {{ if le $count 0}}
+        {{ $count = 1 }}
+    {{ end }}
+{{ range $i := (seq $count)}}
+    <br/>
+{{ end }}

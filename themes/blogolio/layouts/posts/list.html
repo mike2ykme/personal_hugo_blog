@@ -2,7 +2,7 @@
 <!-- <h2>Blog Posts:</h2> -->
 {{ partial "title_bar.html" "Blog Posts:" }}
 <div class="w3-row">
-{{ range $idx, $page := (.Paginator 8).Pages }}
+{{ range $idx, $page := (.Paginator 8).Pages.Reverse }}
     {{ partial "post_summary.html" . }}
     <!-- {{ $page.Params.Title}}     -->
     <!-- {{ if eq (mod $idx 4) 0}}
