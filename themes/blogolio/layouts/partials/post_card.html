@@ -38,8 +38,8 @@
           <span class="w3-padding-large w3-right">
             <b>tags:</b> <br>
             {{ range .Params.tags}}
-            <span class="w3-tag w3-green w3-round-large">
-              <a href="/tags/{{ . | urlize }}" class="tag"> {{ . }}</a>
+            <span class="w3-tag w3-green w3-round-large" style="margin-top:2px;">
+              <a href="/tags/{{ . | urlize }}" class="tag" style="text-decoration: none;"> {{ . }}</a>
             </span>
             {{ end }}
           </span>

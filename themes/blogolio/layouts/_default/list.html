@@ -1,13 +1,13 @@
-{{ define "main" }}
-
-{{ partial "title_bar.html" .Title }} 
+{{ define "main" }} {{ partial "title_bar.html" .Title }}
 <!--  -->
 {{.Content}}
-<ul>
-  {{ range.Pages }}
-  <li>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  </li>
-  {{ end }}
-</ul>
+<div class="opensource-grid-container">
+  {{ range $idx, $page := (.Paginator 8).Pages.Reverse }}
+    {{partial "card_post_summary.html" .}}
+{{ end }}
+</div>
+{{ template "_internal/pagination.html" . }}
+<!-- https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/ -->
+</div>
+
 {{ end }}

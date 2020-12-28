@@ -1,16 +1,10 @@
 {{ define "main"}}
 <!-- <h2>Blog Posts:</h2> -->
 {{ partial "title_bar.html" "Blog Posts:" }}
-<div class="w3-row">
+<div class="opensource-grid-container">
 {{ range $idx, $page := (.Paginator 8).Pages.Reverse }}
-    {{ partial "post_summary.html" . }}
-    <!-- {{ $page.Params.Title}}     -->
-    <!-- {{ if eq (mod $idx 4) 0}}
-        {{if gt $idx 0 }}
-            </div><div class="w3-row">
-        {{ end }}
-    {{ end}}  -->
-
+    <!-- {{ partial "post_summary.html" . }} -->
+    {{ partial "card_post_summary.html" . }}
 {{ end }}
 </div>
 {{ template "_internal/pagination.html" . }}

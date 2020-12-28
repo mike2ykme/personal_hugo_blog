@@ -48,6 +48,19 @@
   min-width: 300px;
   /* min-height: 300px; */
 }
+.grid-item {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* padding: 20px; */
+  /* font-size: 30px; */
+  overflow: hidden;
+  height: 400px;
+  /* margin: 10px; */
+  margin: 5px;
+  text-align: center;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+  /* box-shadow: 5px 5px 15px 5px #000000; */
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
   .opensource-grid-item {
     background-color: rgba(255, 255, 255, 0.8);
@@ -65,7 +78,7 @@
   .opensource-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 10px;
+    /* padding: 10px; */
   }
   
   @media only screen and (max-width: 1100px) {

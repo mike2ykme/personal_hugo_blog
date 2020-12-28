@@ -1,0 +1,16 @@
+<div class="grid-item">
+    <a href="{{ .RelPermalink }}" style="cursor: pointer;">
+      <div
+        class="post_summary_image"
+        style="overflow: hidden; max-height: 200px"
+      >
+        <img
+          src="{{ .Params.image | relURL }}"
+          alt="{{ .Params.alt_text}}"
+          style="width: 100%"
+        />
+      </div>
+    </a>
+    <a href="{{ .RelPermalink }}"><h4>{{ .Title }}</h4></a>
+    <p>{{ .Summary | truncate 190 }}</p>
+  </div>
