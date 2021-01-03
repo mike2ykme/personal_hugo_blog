@@ -57,42 +57,70 @@
   /* margin: 10px; */
   margin: 5px;
   text-align: center;
-  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
   /* box-shadow: 5px 5px 15px 5px #000000; */
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-  .opensource-grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    /* background-color: rgba(29, 28, 25, 0.8); */
-    /* border: 1px solid rgba(0, 0, 0, 0.8); */
-    padding: 20px;
-    font-size: 30px;
-    margin: 10px;
-    text-align: center;
-    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-    /* box-shadow: 5px 5px 15px 5px #000000; */
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  
+.opensource-grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* background-color: rgba(29, 28, 25, 0.8); */
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 20px;
+  font-size: 30px;
+  margin: 10px;
+  text-align: center;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  /* box-shadow: 5px 5px 15px 5px #000000; */
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.opensource-grid-container {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(4, 1fr);
+  /* padding: 10px; */
+}
+
+.nav-grid-container{
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(4, 1fr);
+  /* padding: 10px; */
+}
+.nav-grid-item{
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  background-color: #616161;
+}
+.nav-grid-item:hover{
+  overflow: hidden;
+  text-align: center;
+  color: #fff ;
+  background-color: #616161;
+  /* color: blue; */
+}
+.wide-block{
+  width: 100%;
+  display: block;
+}
+@media only screen and (max-width: 1100px) {
   .opensource-grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* padding: 10px; */
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
   }
-  
-  @media only screen and (max-width: 1100px) {
-       .opensource-grid-container {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      padding: 10px;
-    }
+}
+@media only screen and (max-width: 480px) {
+  .opensource-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px;
   }
-  @media only screen and (max-width: 480px) {
-       .opensource-grid-container {
+  .nav-grid-container{
       display: grid;
       grid-template-columns: 1fr;
-      padding: 10px;
-    }
+      /* padding: 10px; */
   }
-  
+}

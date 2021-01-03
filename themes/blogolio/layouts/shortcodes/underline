@@ -1,0 +1,3 @@
+<!-- raw HTML -->
+<!-- https://anaulin.org/blog/hugo-raw-html-shortcode/ -->
+<span style="text-decoration:underline">{{ .Inner | safeHTML}}</span>
