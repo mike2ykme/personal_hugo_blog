@@ -14,7 +14,7 @@ categories:
 - Career
 tags:
 - Java
-- Concurrency
+- concurrency
 - book
 series:
 Summary: "Continuing to read through the book 'Java Concurrency in Practice'"

@@ -7,6 +7,7 @@
       {{ range first 4 (where .Site.RegularPages "Type" "in" "posts").ByDate.Reverse }}
       <a href="{{ .RelPermalink }}" style="text-decoration: none;">
         <li class="w3-padding-16">
+          <div style="overflow: hidden;">
           {{- if .Params.image}}
             <img src="{{ .Params.image | relURL }}" alt="{{ .Params.alt_text}}" class="w3-left w3-margin-right" style="width:50px">
             {{ else }}
@@ -14,6 +15,7 @@
           {{ end }}
           <span class="w3-large">{{ .Title }}</span><br>
           <span>{{ .Summary | truncate 45}}</span>
+        </div>
         </li>
       </a>
       {{ end }}
