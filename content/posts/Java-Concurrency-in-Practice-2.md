@@ -9,7 +9,7 @@ image: "/images/trains_compressed.jpg"
 alt_text: "Java Concurrency in Practice 2 screenshot"
 year: "2020"
 month: "2020/12"
-draft: false
+draft: true
 categories:
 - Career
 tags:
