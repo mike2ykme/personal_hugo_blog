@@ -2,7 +2,7 @@
 <!-- <h2>Blog Posts:</h2> -->
 {{ partial "title_bar.html" "Blog Posts:" }}
 <div class="opensource-grid-container">
-{{ range $idx, $page := (.Paginator 8).Pages.Reverse }}
+{{ range $idx, $page := (.Paginator 8).Pages }}
     <!-- {{ partial "post_summary.html" . }} -->
     {{ partial "card_post_summary.html" . }}
 {{ end }}
