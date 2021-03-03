@@ -1,0 +1,12 @@
+<!-- https://mangolassi.it/topic/21564/how-can-i-scale-an-image-in-a-hugo-page -->
+{{ $image := (.Get 0) }}
+{{ $alt := .Get 1 }}
+<img src="{{ $image | relURL }}" 
+    {{- if $alt }}
+    alt="{{ $alt }}" 
+    {{- end -}}
+    class="w3-image"
+    >
+
+<!-- author_image: "{{ "/images/me_cropped.jpg" | relURL }}" -->
+

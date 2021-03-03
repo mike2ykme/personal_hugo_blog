@@ -23,6 +23,10 @@ Summary: Bender coding challenge in Java
 ---
 * Challenge: https://www.codingame.com/training/medium/shadows-of-the-knight-episode-1/
 
+
+This solution is based on state machines. What I've done here is look at the current state of the board, looked at what our next steps are supposed to be, and then performed the action. Additionally, since part of the challenge is to ensure we don't get stuck in a looping state we're tracking our history to prevent an infinite loop. To perform this history I'm using a HashMap that keeps track of a list of previous points that are referenced by current board state.
+
+
 ``` Java
 
 import java.util.*;

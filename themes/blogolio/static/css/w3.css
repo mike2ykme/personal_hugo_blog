@@ -91,6 +91,7 @@ figure {
   margin: 1em 40px;
 }
 img {
+  /* max-width: inherit; */
   border-style: none;
 }
 code,
